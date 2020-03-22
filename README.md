@@ -21,10 +21,11 @@ Binocular stereo matching has always been a research hotspot of binocular vision
 
 ### Cost Aggregation and Parallax Refinement
 The parallax value obtained above is an integer. In order to obtain higher accuracy,we use the minimum cost value and two adjacent cost values to fit the parabola.
+
 <img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/curve_fitting.jpeg" width="30%" height="30%" align ="center"/>
 
+Use the following formula to fit the parabola and update the parallax
 
-Use the following formula to fit the parabola and update the parallax:
 <img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/parallax.png" width="30%" height="30%" align ="center"/>
 
 d2 - parallax calculated by cost calculation
@@ -38,19 +39,24 @@ C1,C3 - the left and the right cost between minimun cost
 > Parallax range: 50
 
 The result of using SAD as cost function:
-<img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/SAD_result.jpg" width="30%" height="30%" align ="center"/>
+
+<img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/SAD_result.jpg" width="40%" height="40%" align ="center"/>
 
 The result of using NCC as cost function:
-<img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/NCC_result.jpg" width="30%" height="30%" align ="center"/>
+
+<img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/NCC_result.jpg" width="40%" height="40%" align ="center"/>
 
 The result of using SHD as cost function:
-<img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/SHD_result.jpg" width="30%" height="30%" align ="center"/>
+
+<img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/SHD_result.jpg" width="40%" height="40%" align ="center"/>
 
 Program run time (rough calculation, SHD>SAD>NCC) :
 | function | SAD  | NCC | SHD |
 | :--:     | :--: |:--: |:--: |
 | time     | 2.18min | 0.91min | 3.99min |
 
+
 ## Reference
 [双目立体匹配步骤详解](https://www.cnblogs.com/ethan-li/p/10216647.html)
+
 [双camera景深计算](https://www.cnblogs.com/jukan/p/6952243.html)
