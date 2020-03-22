@@ -9,23 +9,21 @@ Binocular stereo matching has always been a research hotspot of binocular vision
 
 ### Cost Calculation
 > We choose three different cost functions for calculation and select the minimum cost in the search window as the parallax
-* Sum of Absolute Differences(SAD):
+* Sum of Absolute Differences(SAD):  
 <img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/SAD.png" width="40%" height="40%" align ="center"/>
 
-* Normalized Cross Correlation(NCC):
+* Normalized Cross Correlation(NCC):  
 <img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/NCC.png" width="40%" height="40%" align ="center"/>
 
-* Sum of Hamming Distances(SHD)：
+* Sum of Hamming Distances(SHD)：  
 <img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/SHD.png" width="40%" height="40%" align ="center"/>
 
 
 ### Cost Aggregation and Parallax Refinement
-The parallax value obtained above is an integer. In order to obtain higher accuracy,we use the minimum cost value and two adjacent cost values to fit the parabola.
-
+The parallax value obtained above is an integer. In order to obtain higher accuracy,we use the minimum cost value and two adjacent cost values to fit the parabola.  
 <img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/curve_fitting.jpeg" width="60%" height="60%" align ="center"/>
 
-Use the following formula to fit the parabola and update the parallax
-
+Use the following formula to fit the parabola and update the parallax  
 <img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/parallax.png" width="30%" height="30%" align ="center"/>
 
 d2 - parallax calculated by cost calculation  
@@ -38,16 +36,13 @@ C1,C3 - the left and the right cost between minimun cost
 > Template size: 11*11
 > Parallax range: 50
 
-The result of using SAD as cost function:
-
+The result of using SAD as cost function:  
 <img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/SAD_result.jpg" width="70%" height="70%" align ="center"/>
 
-The result of using NCC as cost function:
-
+The result of using NCC as cost function:  
 <img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/NCC_result.jpg" width="70%" height="70%" align ="center"/>
 
-The result of using SHD as cost function:
-
+The result of using SHD as cost function:  
 <img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/SHD_result.jpg" width="70%" height="70%" align ="center"/>
 
 Program run time (rough calculation, SHD>SAD>NCC) :
