@@ -1,2 +1,4 @@
 # Binocular-Depth-Estimation
-Depth of field calculation based on binocular stereo matching using MATLAB
+Calculation of depth of field based on traditional binocular stereo matching algorithm using ·MATLAB·
+
+
