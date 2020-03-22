@@ -4,7 +4,7 @@ Binocular stereo matching has always been a research hotspot of binocular vision
 ## Algorithm Flow:
 > First import the left and right images, and set a reasonable search window and template size. Take each pixel as the center and use fixed-size pixels as templates. It is assumed that the camera has been corrected, so it searches only horizontally. Move the left image template continuously in the search window to calculate the cost of the left and right templates. After the cost is obtained, the signal-to-noise ratio of the result is increased by accumulating pixel information, that is, the cost aggregation process. Here we optimize the coordinates of the smallest generation value in the window, and use parabolic fitting to update the parallax value. Finally, the disparity map obtained is refined (use median filter) to eliminate part of the noise generated in the disparity map.
 
-<img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/algorithm_flow.png" width="40%" height="40%" align ="center"/>
+<img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/algorithm_flow.png" width="50%" height="50%" align ="center"/>
 
 
 ### Cost Calculation
@@ -28,10 +28,10 @@ Use the following formula to fit the parabola and update the parallax
 
 <img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/parallax.png" width="30%" height="30%" align ="center"/>
 
-d2 - parallax calculated by cost calculation
-dset - the updated parallax
-C2 - Minimum cost
-C1,C3 - the left and the right cost between minimun cost
+d2 - parallax calculated by cost calculation  
+dset - the updated parallax  
+C2 - Minimum cost  
+C1,C3 - the left and the right cost between minimun cost  
 
 
 ## Result
@@ -57,6 +57,5 @@ Program run time (rough calculation, SHD>SAD>NCC) :
 
 
 ## Reference
-[双目立体匹配步骤详解](https://www.cnblogs.com/ethan-li/p/10216647.html)
-
+[双目立体匹配步骤详解](https://www.cnblogs.com/ethan-li/p/10216647.html)  
 [双camera景深计算](https://www.cnblogs.com/jukan/p/6952243.html)
