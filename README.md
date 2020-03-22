@@ -40,15 +40,15 @@ C1,C3 - the left and the right cost between minimun cost
 
 The result of using SAD as cost function:
 
-<img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/SAD_result.jpg" width="60%" height="60%" align ="center"/>
+<img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/SAD_result.jpg" width="70%" height="70%" align ="center"/>
 
 The result of using NCC as cost function:
 
-<img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/NCC_result.jpg" width="60%" height="60%" align ="center"/>
+<img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/NCC_result.jpg" width="70%" height="70%" align ="center"/>
 
 The result of using SHD as cost function:
 
-<img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/SHD_result.jpg" width="60%" height="60%" align ="center"/>
+<img src="https://github.com/MJ-Jiang/Binocular-Depth-Estimation/blob/master/img-storage/SHD_result.jpg" width="70%" height="70%" align ="center"/>
 
 Program run time (rough calculation, SHD>SAD>NCC) :
 | function | SAD  | NCC | SHD |
